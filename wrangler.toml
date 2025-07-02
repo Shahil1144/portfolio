@@ -1,0 +1,5 @@
+name = "shahil-sharma-portfolio"
+compatibility_date = "2025-07-02"
+
+[assets]
+directory = "."
