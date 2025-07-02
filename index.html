@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shahil Sharma - Portfolio Coming Soon</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #1a202c, #2d3748);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Arial', sans-serif;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            max-width: 600px;
+            width: 90%;
+        }
+        .title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #1a202c;
+            margin-bottom: 1rem;
+        }
+        .subtitle {
+            font-size: 1.25rem;
+            color: #4a5568;
+            margin-bottom: 1.5rem;
+        }
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        .countdown div {
+            background: #2d3748;
+            color: white;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            min-width: 80px;
+        }
+        .countdown span {
+            display: block;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        .countdown label {
+            font-size: 0.875rem;
+            text-transform: uppercase;
+        }
+        .links a {
+            color: #3182ce;
+            text-decoration: none;
+            margin: 0 0.5rem;
+            transition: color 0.3s;
+        }
+        .links a:hover {
+            color: #2b6cb0;
+        }
+        .footer {
+            margin-top: 2rem;
+            color: #4a5568;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Shahil Sharma</h1>
+        <p class="subtitle">Portfolio Coming Soon</p>
+        <p class="text-lg text-gray-700">Mechanical Engineer | Innovator in Alternative Fuels & Renewable Energy</p>
+        <p class="text-md text-gray-600 mb-4">Rolpa, Nepal</p>
+        <div class="links">
+            <a href="mailto:shailsharma.com.np">shailsharma.com.np</a>
+            <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+        </div>
+        <div class="countdown" id="countdown">
+            <div>
+                <span id="days">182</span>
+                <label>Days</label>
+            </div>
+            <div>
+                <span id="hours">12</span>
+                <label>Hours</label>
+            </div>
+            <div>
+                <span id="minutes">5</span>
+                <label>Minutes</label>
+            </div>
+            <div>
+                <span id="seconds">29</span>
+                <label>Seconds</label>
+            </div>
+        </div>
+        <p class="text-lg font-semibold text-gray-700">Stay tuned for innovative projects and research!</p>
+        <p class="footer">© 2025 Shahil Sharma. All rights reserved.</p>
+    </div>
+
+    <script>
+        const worker = new Worker('/worker.js');
+        worker.postMessage('start');
+        worker.onmessage = function(e) {
+            const { days, hours, minutes, seconds, expired } = e.data;
+            if (expired) {
+                document.getElementById('countdown').innerHTML = '<p class="text-lg text-gray-700">The portfolio is here!</p>';
+                worker.terminate();
+            } else {
+                document.getElementById('days').textContent = days;
+                document.getElementById('hours').textContent = hours;
+                document.getElementById('minutes').textContent = minutes;
+                document.getElementById('seconds').textContent = seconds;
+            }
+        };
+    </script>
+</body>
+</html>
