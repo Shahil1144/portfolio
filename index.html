@@ -3,121 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shahil Sharma - Portfolio Coming Soon</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <style>
-        body {
-            background: linear-gradient(135deg, #1a202c, #2d3748);
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family: 'Arial', sans-serif;
-        }
-        .container {
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 1rem;
-            padding: 2rem;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-            text-align: center;
-            max-width: 600px;
-            width: 90%;
-        }
-        .title {
-            font-size: 2.5rem;
-            font-weight: bold;
-            color: #1a202c;
-            margin-bottom: 1rem;
-        }
-        .subtitle {
-            font-size: 1.25rem;
-            color: #4a5568;
-            margin-bottom: 1.5rem;
-        }
-        .countdown {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin: 2rem 0;
-        }
-        .countdown div {
-            background: #2d3748;
-            color: white;
-            padding: 1rem;
-            border-radius: 0.5rem;
-            min-width: 80px;
-        }
-        .countdown span {
-            display: block;
-            font-size: 2rem;
-            font-weight: bold;
-        }
-        .countdown label {
-            font-size: 0.875rem;
-            text-transform: uppercase;
-        }
-        .links a {
-            color: #3182ce;
-            text-decoration: none;
-            margin: 0 0.5rem;
-            transition: color 0.3s;
-        }
-        .links a:hover {
-            color: #2b6cb0;
-        }
-        .footer {
-            margin-top: 2rem;
-            color: #4a5568;
-        }
-    </style>
+    <title>Shahil Sharma - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <div class="container">
-        <h1 class="title">Shahil Sharma</h1>
-        <p class="subtitle">Portfolio Coming Soon</p>
-        <p class="text-lg text-gray-700">Mechanical Engineer | Innovator in Alternative Fuels & Renewable Energy</p>
-        <p class="text-md text-gray-600 mb-4">Rolpa, Nepal</p>
-        <div class="links">
-            <a href="mailto:shailsharma.com.np">shailsharma.com.np</a>
-            <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+<body class="font-sans text-gray-800">
+    <!-- Hero Section -->
+    <section class="relative h-screen bg-gradient-to-r from-blue-600 to-purple-600 flex items-center justify-center text-white">
+        <div class="text-center px-4">
+            <div class="mb-6">
+                <img src="Shahil.jpg" alt="Shahil Sharma" class="w-32 h-32 md:w-48 md:h-48 rounded-full mx-auto object-cover shadow-lg">
+            </div>
+            <h1 class="text-5xl md:text-7xl font-bold mb-4">Hi, I'm Shahil Sharma</h1>
+            <p class="text-xl md:text-2xl mb-6">Automobile Engineer & Innovator in Alternative Fuels and Renewable Energy</p>
+            <a href="#contact" class="inline-block bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition">Get In Touch</a>
         </div>
-        <div class="countdown" id="countdown">
-            <div>
-                <span id="days">182</span>
-                <label>Days</label>
-            </div>
-            <div>
-                <span id="hours">12</span>
-                <label>Hours</label>
-            </div>
-            <div>
-                <span id="minutes">5</span>
-                <label>Minutes</label>
-            </div>
-            <div>
-                <span id="seconds">29</span>
-                <label>Seconds</label>
+        <div class="absolute bottom-10 animate-bounce">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-8">About Me</h2>
+            <p class="text-lg max-w-2xl mx-auto text-center">
+                I'm a passionate mechanical engineer from Rolpa, Nepal, with a focus on alternative fuels, renewable energy, and engine combustion. With experience at the Nepal Academy of Science and Technology and a strong academic background from Tribhuvan University, I specialize in biodiesel research, fuel characterization, and engine performance testing. My skills include AutoCAD, SolidWorks, MATLAB, and ANSYS Fluent, complemented by leadership and project management abilities. When not innovating, I enjoy exploring sustainable solutions for a greener future.
+            </p>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-8">Research Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-2xl font-semibold mb-2">Tensile Strength Testing Machine</h3>
+                    <p class="text-gray-600 mb-4">Designed a machine to measure tensile strength and deformation of fibers, such as human hair, using CATIA. Conducted in a laboratory with a detailed LabTEX report.</p>
+                    <a href="#" class="text-blue-600 hover:underline">View Details</a>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-2xl font-semibold mb-2">Cam-Operated Hammer Mechanism</h3>
+                    <p class="text-gray-600 mb-4">Developed a quick return mechanism project to study reciprocating motion timing. Fabricated and simulated using SolidWorks.</p>
+                    <a href="#" class="text-blue-600 hover:underline">View Details</a>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-2xl font-semibold mb-2">Biodiesel Blend Performance in IC Engine</h3>
+                    <p class="text-gray-600 mb-4">Investigated optimal biodiesel blend ratios from waste cooking oil, testing performance and emission characteristics in a laboratory diesel engine.</p>
+                    <a href="#" class="text-blue-600 hover:underline">View Details</a>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-2xl font-semibold mb-2">Variable Compression Ratio Engine with Nanoparticles</h3>
+                    <p class="text-gray-600 mb-4">Ongoing research on biodiesel from various sources with nanoparticles (e.g., TiO₂, ZnO) to optimize engine performance, combustion, and emissions.</p>
+                    <a href="#" class="text-blue-600 hover:underline">View Details</a>
+                </div>
             </div>
         </div>
-        <p class="text-lg font-semibold text-gray-700">Stay tuned for innovative projects and research!</p>
-        <p class="footer">© 2025 Shahil Sharma. All rights reserved.</p>
-    </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-8">Contact Me</h2>
+            <div class="max-w-lg mx-auto">
+                <p class="text-lg text-center mb-6">Reach out to discuss innovative projects or research collaborations!</p>
+                <div class="flex justify-center space-x-4">
+                    <a href="mailto:shahil.75214@live.in.edu.np" class="text-blue-600 hover:underline">Email</a>
+                    <a href="https://linkedin.com/in/shahil.sharma.1" class="text-blue-600 hover:underline">LinkedIn</a>
+                </div>
+                <p class="text-lg text-center mt-4">Based in Rolpa, Nepal</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-6 bg-gray-800 text-white text-center">
+        <p>© 2025 Shahil Sharma. All rights reserved.</p>
+    </footer>
 
     <script>
-        const worker = new Worker('/worker.js');
-        worker.postMessage('start');
-        worker.onmessage = function(e) {
-            const { days, hours, minutes, seconds, expired } = e.data;
-            if (expired) {
-                document.getElementById('countdown').innerHTML = '<p class="text-lg text-gray-700">The portfolio is here!</p>';
-                worker.terminate();
-            } else {
-                document.getElementById('days').textContent = days;
-                document.getElementById('hours').textContent = hours;
-                document.getElementById('minutes').textContent = minutes;
-                document.getElementById('seconds').textContent = seconds;
-            }
-        };
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
     </script>
 </body>
 </html>
